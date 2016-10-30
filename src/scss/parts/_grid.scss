@@ -1,0 +1,71 @@
+@mixin container-fluid() {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left:  floor( $gutter / 2 ) + px;
+	padding-right: ceil( $gutter / 2 ) + px;
+	@include clearfix;
+}
+
+@mixin row() {
+	margin-left:  ceil( $gutter / -2 ) + px;
+	margin-right: floor( $gutter / -2 ) + px;
+	@include clearfix;
+}
+
+@mixin col() {
+	position: relative;
+	float: left;
+	min-height: 1px;
+	width: 100%;
+	padding-left:  floor( $gutter / 2 ) + px;
+	padding-right: ceil( $gutter / 2 ) + px;
+}
+
+
+@mixin col-width( $class ) {
+	@for $i from 1 through $columns {
+		.col-#{$class}-#{$i} {
+			width: percentage( $i / $columns );
+		}
+	}
+}
+
+@mixin col-offset( $class ) {
+	@for $i from 0 through $columns {
+		.col-#{$class}-offset-#{$i} {
+			margin-left: percentage( $i / $columns );
+		}
+	}
+}
+
+@mixin col-push( $class ) {
+	.col-#{$class}-push-0 {
+		left: auto;
+	}
+	
+	@for $i from 1 through $columns {
+		.col-#{$class}-push-#{$i} {
+			left: percentage( $i / $columns );
+		}
+	}
+}
+
+@mixin col-pull( $class ) {
+	.col-#{$class}-pull-0 {
+		right: auto;
+	}
+	
+	@for $i from 1 through $columns {
+		.col-#{$class}-pull-#{$i} {
+			right: percentage( $i / $columns );
+		}
+	}
+}
+
+
+@mixin grid( $class ) {
+	@include col-width( $class );
+	@include col-offset( $class );
+	@include col-push( $class );
+	@include col-pull( $class );
+}

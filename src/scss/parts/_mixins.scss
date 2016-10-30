@@ -1,0 +1,20 @@
+@mixin breakpoint( $point, $type: min ) {
+	@media (#{$type}-width: $point + px) { @content }
+}
+
+@mixin box-sizing( $boxmodel ) {
+	-webkit-box-sizing: $boxmodel;
+	   -moz-box-sizing: $boxmodel;
+			box-sizing: $boxmodel;
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

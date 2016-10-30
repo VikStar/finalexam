@@ -1,0 +1,143 @@
+// Header
+header {
+	height: 540px;
+	background: url("../img/header.png") no-repeat center center / auto 564px;
+	padding-top: 20px;
+
+	@include breakpoint( $md ) {
+		height: 700px;
+	    background-size: cover;
+	};
+
+	.nav_links {
+		a {
+			font-family: $ms;
+			font-weight: $bold;
+			color: $color2;
+			text-decoration: none;
+			transition: color .3s, border-color .3s;
+
+			&:last-child {
+				border: 2px solid $color2;
+				padding: 7px 16px;
+				border-radius: 18px;
+			    margin-left: 16px;
+			}
+
+			&:hover {
+				color: $color4;
+
+				&:last-child {
+					border-color: $color4;;
+				}
+			}
+		}
+	}
+}
+
+
+// Footer
+footer {
+	border-top: 4px solid $color4;
+	padding-top: 16px;
+	text-align: center;
+	@include breakpoint($md) {
+		padding-top: 36px;
+	};
+
+	.footer_logo {
+		a {
+			font-family: $ms;
+			color: $color4;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: $bold;
+			text-decoration: none;
+			letter-spacing: 0.8px;
+		}
+
+		@include breakpoint($md) {
+			text-align: right;
+		};
+
+		@include breakpoint($lg) {
+			text-align: left;
+		};
+	}
+
+	.footer_menu {
+		margin-top: 11px;
+		@include breakpoint($md) {
+			margin-top: 0;
+			text-align: left;
+		};
+
+		.footer_menu_header {
+			font-weight: $bold;
+			font-family: $ms;
+		}
+
+		.footer_menu_list {
+			margin-top: 1px;
+			@include breakpoint($md) {
+				margin-top: 11px;
+			};
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				margin-left: 10px;
+				&:first-child { margin-left: 0; }
+
+				@include breakpoint($md) {
+					margin-left: 0;
+					display: block;
+					margin-bottom: 5px;
+				};
+			}
+
+			a {
+				color: $color3;
+				text-decoration: none;
+				transition: color .3s, border-color .3s;
+				border-bottom: 1px solid transparent;
+
+				&:hover { color: $color1; border-color: $color1; }
+			}
+		}
+	}
+
+	.designed {
+		margin-top: 10px;
+
+		@include breakpoint($md) {
+			margin-top: 0px;
+		};
+
+		@include breakpoint($md) {
+			text-align: right;
+		};
+
+		.designed_label {
+			font-family: $ms;
+			font-weight: $bold;
+			font-size: 10px;
+			color: $color5;
+
+			span {
+				padding: 0 20px;
+			}
+		}
+
+		.designed_logo {
+			@include breakpoint($md) {
+				margin-top: 8px;
+			};
+		}
+	}
+}
