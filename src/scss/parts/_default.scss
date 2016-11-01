@@ -34,7 +34,8 @@
 	@include grid( lg );
 };
 
-.clearfix {
+.clearfix,
+.cf {
 	@include clearfix;
 }
 
@@ -44,4 +45,10 @@ body {
 	font-weight: $light;
 	font-size: 14px;
 	margin: 0;
+}
+
+p {
+	margin: 0 0 1em;
+
+	&:last-child { margin: 0; }
 }

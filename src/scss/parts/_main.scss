@@ -2,20 +2,37 @@
 header {
 	height: 540px;
 	background: url("../img/header.png") no-repeat center center / auto 564px;
-	padding-top: 20px;
+	padding-top: 29px;
 
 	@include breakpoint( $md ) {
 		height: 700px;
 	    background-size: cover;
+	    padding-top: 46px;
 	};
+
+	a {
+		color: $color2;
+		transition: color .3s, border-color .3s, background .3s;
+		text-decoration: none;
+
+		&:hover {
+			color: $color4;
+
+			&:last-child {
+				border-color: $color4;;
+			}
+		}
+	}
+
+	.nav_links,
+	.nav_logo {
+		text-align: center;
+	}
 
 	.nav_links {
 		a {
 			font-family: $ms;
-			font-weight: $bold;
-			color: $color2;
-			text-decoration: none;
-			transition: color .3s, border-color .3s;
+			font-weight: $bold;			
 
 			&:last-child {
 				border: 2px solid $color2;
@@ -23,12 +40,92 @@ header {
 				border-radius: 18px;
 			    margin-left: 16px;
 			}
+		}
 
-			&:hover {
-				color: $color4;
+		@include breakpoint( $md ) {
+			text-align: right;
+		}
+	}
+
+	.nav_logo {
+		margin-top: 124px;
+
+		a {
+			font-size: 20px;
+			font-weight: $bold;
+			font-family: $ms;
+			letter-spacing: 1px;
+		}
+
+		@include breakpoint( $md ) {
+			margin-top: 0;
+			text-align: left;
+		};
+	}
+
+	.header_content {
+	    margin-top: 27px;
+		text-align: center;
+
+		@include breakpoint( $md ) {
+			margin-top: 144px;
+		}
+
+		.header_content_text {
+			p {
+				color: $color2;
+
+				&:first-child {
+					font-size: 30px;
+					font-weight: $bold;
+					font-family: $ms;
+					text-transform: uppercase;
+					margin-bottom: 6px;
+
+					@include breakpoint( $md ) {
+						font-size: 52px;
+						width: 500px;
+						margin-left: auto;
+						margin-right: auto;
+						margin-bottom: 22px;
+					}
+				}
 
 				&:last-child {
-					border-color: $color4;;
+					font-size: 18px;
+					width: 236px;
+					margin-left: auto;
+					margin-right: auto;
+
+					@include breakpoint( $md ) {
+						font-size: 24px;
+						width: auto;
+					}
+				}
+			}
+		}
+
+		.header_content_button {
+			margin-top: 12px;
+
+			@include breakpoint( $md ) {
+				margin-top: 32px;
+			}
+
+			a {
+				background: $color4;
+				font-family: $ms;
+				font-weight: $bold;
+				padding: 11px 52px;
+				display: inline-block;
+				border-radius: 18px;
+
+				&:hover {
+					background: $color2;
+				}
+
+				@include breakpoint( $md ) {
+					padding: 11px 23px;
 				}
 			}
 		}
@@ -41,7 +138,7 @@ footer {
 	border-top: 4px solid $color4;
 	padding-top: 16px;
 	text-align: center;
-	@include breakpoint($md) {
+	@include breakpoint( $md ) {
 		padding-top: 36px;
 	};
 
