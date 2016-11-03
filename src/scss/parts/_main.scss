@@ -358,6 +358,82 @@ header {
 	}
 }
 
+#activities {
+	.activity_wrapper {
+		@extend .col;
+
+		@include breakpoint( $mqmd ) {
+			@extend .col-md-4;
+
+			&:nth-child(5),
+			&:nth-child(6) {
+				@extend .col-md-8;
+			
+				.activity {
+					.activity_image {
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+		.activity {
+			position: relative;
+			margin-bottom: 20px;
+			border-radius: 4px;
+			overflow: hidden;
+
+			.activity_image {
+				overflow: hidden;
+				height: 310px;
+				position: relative;
+
+				img {
+					height: 100%;
+					width: auto;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			.activity_text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: $color2;
+				font-size: 22px;
+				font-weight: $bold;
+				font-family: $ms;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.search {
+	text-align: center;
+
+	h2 {
+		font-size: 22px;
+		font-family: $ms;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
+	.search_form {
+		
+	}
+}
+
 // Footer
 footer {
 	border-top: 4px solid $color4;

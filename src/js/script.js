@@ -9,4 +9,6 @@
 
 //=include ../components/bxslider-4/dist/jquery.bxslider.min.js
 
+//=include ../components/masonry/dist/masonry.pkgd.min.js
+
 //=include parts/main.js
