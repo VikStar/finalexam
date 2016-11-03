@@ -263,6 +263,10 @@ header {
     			display: none;
     		}
 
+    		@include breakpoint( $mqlg ) {
+    			top: 40%;
+    		}
+
     		&:hover {
     			opacity: 1;
     		}
@@ -324,6 +328,10 @@ header {
 			margin-top: 16px;
 			margin-bottom: 11px;
 		}
+
+		.slider_info_text {
+			color: $color5;
+		}
 	}
 }
 
@@ -358,6 +366,21 @@ header {
 	}
 }
 
+.activities {
+	h2 {
+		font-size: 22px;
+		font-family: $ms;
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 13px;
+
+		@include breakpoint( $mqmd ) {
+			margin-top: 86px;
+			margin-bottom: 34px;
+		}
+	}
+}
+
 #activities {
 	.activity_wrapper {
 		@extend .col;
@@ -386,10 +409,18 @@ header {
 			border-radius: 4px;
 			overflow: hidden;
 
+			@include breakpoint( 0, $mqmd - 1 ) {
+				margin-bottom: 10px;
+			}
+
 			.activity_image {
 				overflow: hidden;
 				height: 310px;
 				position: relative;
+
+				@include breakpoint( 0, $mqmd - 1 ) {
+					height: 120px;
+				}
 
 				img {
 					height: 100%;
@@ -398,6 +429,11 @@ header {
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
+
+					@include breakpoint( 0, $mqmd - 1 ) {
+						height: auto;
+						width: 100%;
+					}
 				}
 			}
 
@@ -423,6 +459,13 @@ header {
 	h2 {
 		font-size: 22px;
 		font-family: $ms;
+	    margin-top: 75px;
+	    margin-bottom: 29px;
+
+	    @include breakpoint( 0, $mqmd - 1 ) {
+	    	margin-top: 15px;
+	    	margin-bottom: 8px;
+	    }
 	}
 
 	p {
@@ -430,7 +473,73 @@ header {
 	}
 
 	.search_form {
-		
+		margin-top: 35px;
+	    margin-bottom: 100px;
+
+	    @include breakpoint( 0, $mqmd - 1 ) {
+    	    margin-top: 15px;
+    	    margin-bottom: 40px;
+	    }
+
+		.search_field,
+		.search_button {
+			height: 40px;
+		}
+
+		.search_field {
+			color: $color7;
+			border: 1px solid $color5;
+			width: 100%;
+			padding: 0 16px;
+			border-radius: 4px;
+			list-style-image: 38px;
+
+			@include breakpoint( $mqmd ) {
+				width: 240px;
+			}
+		}
+
+		.search_button {
+			color: $color2;
+			font-weight: $bold;
+			font-family: $ms;
+			background: $color4;
+			border-radius: 18px;
+			border: none;
+			width: 100%;
+			line-height: 36px;
+			transition: color .3s, background .3s;
+			border: 2px solid $color4;
+
+			&:hover {
+				color: $color4;
+				background: $color2;
+			}
+
+			@include breakpoint( $mqmd ) {
+				width: 160px;
+			}
+		}
+
+		.form-item {
+			@include breakpoint( $mqmd ) {
+				display: inline-block;
+			}
+
+			&:first-child {
+				margin-bottom: 10px;
+
+				@include breakpoint( $mqmd ) {
+					margin-bottom: 0;
+				}
+			}
+
+			&:last-child {
+				@include breakpoint( $mqmd ) {
+					margin-left: 10px;
+				}
+			}
+		}
 	}
 }
 
@@ -438,7 +547,9 @@ header {
 footer {
 	border-top: 4px solid $color4;
 	padding-top: 16px;
+	padding-bottom: 40px;
 	text-align: center;
+
 	@include breakpoint( $mqmd ) {
 		padding-top: 36px;
 	};

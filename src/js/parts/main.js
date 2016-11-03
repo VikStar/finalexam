@@ -18,9 +18,7 @@
 		per_page: 7
 	};
 
-	function getImages(data) {
-		console.log(data);
-
+	function addImages(data) {
 		var activities = $('#activities');
 
 		for (var i = data.hits.length - 1; i >= 0; i--) {
@@ -28,7 +26,6 @@
 		}
 
 		activities.masonry({
-		  // options
 		  itemSelector: '.activity_wrapper'
 		});
 	}
@@ -45,12 +42,17 @@
 	}
 
 	var pb = $.ajax({
-	  dataType: "json",
-	  url: 'https://pixabay.com/api/',
-	  data: rc,
-	  success: function (data) {
-	  	getImages(data)
-	  }
+		dataType: "json",
+		url: 'https://pixabay.com/api/',
+		data: rc,
+		success: function (data) {
+			addImages(data);
+		}
+	});
+
+	$('#find-activity').submit(function(event) {
+		event.preventDefault();
+		console.log($(this))
 	});
 
 } )( jQuery );

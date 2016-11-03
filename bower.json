@@ -17,6 +17,7 @@
     "jquery": "jquery#^1.12.4"
   },
   "devDependencies": {
-    "masonry": "^4.1.1"
+    "masonry": "^4.1.1",
+    "bxslider-4": "^4.2.5"
   }
 }

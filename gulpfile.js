@@ -14,11 +14,11 @@ var gulp        = require('gulp'),
 
 var path = {
 	build: {
-		html:  'build/',
-		js:    'build/js/',
-		style: 'build/css/',
-		img:   'build/img/',
-		fonts: 'build/fonts/'
+		html:  'docs/',
+		js:    'docs/js/',
+		style: 'docs/css/',
+		img:   'docs/img/',
+		fonts: 'docs/fonts/'
 	},
 	watch: {
 		html:  ['src/**/*.html'],
@@ -34,7 +34,7 @@ var path = {
 		img:   ['src/img/**/*.*', 'src/components/bxslider-4/dist/images/*.*'],
 		fonts: ['src/fonts/**/*.*']
 	},
-	clean: 'build/'
+	clean: 'docs/'
 };
 
 var onError = function(err) {
@@ -46,7 +46,7 @@ var onError = function(err) {
 };
 
 gulp.task('webserver', function () {
-	browserSync({server: "./build"});
+	browserSync({server: "./docs"});
 });
 
 gulp.task('clean', function(cb) {
