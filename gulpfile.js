@@ -24,14 +24,14 @@ var path = {
 		html:  ['src/**/*.html'],
 		js:    ['src/js/**/*.js'],
 		style: ['src/scss/**/*.scss'],
-		img:   ['src/img/**/*.*'],
+		img:   ['src/img/**/*.*', 'src/components/bxslider-4/dist/images/*.*'],
 		fonts: ['src/fonts/**/*.*']
 	},
 	src: {
 		html:  ['src/html/*.html'],
 		js:    ['src/js/script.js'],
 		style: ['src/scss/style.scss'],
-		img:   ['src/img/**/*.*'],
+		img:   ['src/img/**/*.*', 'src/components/bxslider-4/dist/images/*.*'],
 		fonts: ['src/fonts/**/*.*']
 	},
 	clean: 'build/'

@@ -1,0 +1,23 @@
+.bx-wrapper {
+	.bx-loading {
+		background: url('../img/bx_loader.gif') center center no-repeat #ffffff;
+	}
+
+	.bx-prev {
+	    background: url('../img/controls.png') no-repeat 0 -32px;
+	}
+
+	.bx-next {
+	    background: url('../img/controls.png') no-repeat -43px -32px;
+	}
+
+	.bx-controls-auto {
+		.bx-start {
+		    background: url('../img/controls.png') -86px -11px no-repeat;
+		}
+
+		.bx-stop {
+		    background: url('../img/controls.png') -86px -44px no-repeat;
+		}
+	}
+}

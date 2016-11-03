@@ -5,12 +5,16 @@ $gutter: 20;
 $md: 768;
 $lg: 960;
 
+$mqmd: $md + $gutter;
+$mqlg: $lg + $gutter;
+
 // colors
 $color1: #000000; //black
 $color2: #ffffff; //white
 $color3: #666666;
 $color4: #ff4e50;
 $color5: #cccccc;
+$color6: #333333;
 
 // font weights
 $thin: 100;

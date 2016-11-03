@@ -1,5 +1,9 @@
-@mixin breakpoint( $point, $type: min ) {
-	@media (#{$type}-width: $point + px) { @content }
+@mixin breakpoint( $point, $point2: 0 ) {
+	@if $point2 > $point {
+		@media (min-width: $point + px) and (max-width: $point2 + px) { @content }
+	} @else {
+		@media (min-width: $point + px) { @content }
+	}
 }
 
 @mixin box-sizing( $boxmodel ) {
