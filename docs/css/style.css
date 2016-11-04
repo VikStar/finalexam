@@ -1006,6 +1006,7 @@ header {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
     width: 100%;
+    padding: 0 10px;
     text-align: center; }
 
 .search {
@@ -1056,6 +1057,8 @@ header {
       .search .search_form .search_button:hover {
         color: #ff4e50;
         background: #ffffff; }
+      .search .search_form .search_button:focus {
+        outline: none; }
       @media (min-width: 788px) {
         .search .search_form .search_button {
           width: 160px; } }
@@ -1148,3 +1151,6 @@ footer {
     @media (min-width: 788px) {
       footer .designed .designed_logo {
         margin-top: 8px; } }
+
+.error {
+  display: none; }

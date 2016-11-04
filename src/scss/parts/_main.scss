@@ -447,6 +447,7 @@ header {
 				font-weight: $bold;
 				font-family: $ms;
 				width: 100%;
+				padding: 0 10px;
 				text-align: center;
 			}
 		}
@@ -514,6 +515,10 @@ header {
 			&:hover {
 				color: $color4;
 				background: $color2;
+			}
+
+			&:focus {
+				outline: none;
 			}
 
 			@include breakpoint( $mqmd ) {
@@ -649,4 +654,8 @@ footer {
 			};
 		}
 	}
+}
+
+.error {
+	display: none;
 }
